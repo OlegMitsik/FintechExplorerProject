@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FintechExplorerApp/File_grid.css' %}">
+</head>
+
+<body>
+<h3 align="center"> {{ PageName }} <br></h3>
+
+<ul id="rig">
+    {% for Item in FileGrid %}
+    <li>
+        <a class="rig-cell" target="_blank" href="{{ Item.webLink }}">
+            <span class="rig-img" style="background-image: url('{{ Item.thumbLink }}');"></span>
+            <h3>{{ Item.name }}</h3>
+            <span class="rig-overlay"></span>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html> 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FintechExplorerApp/Taxonomy.css' %}">
+   	<script type="text/javascript" src="{% static 'FintechExplorerApp/Jit.js' %}"></script>
+    <script type="text/javascript">
+        var json_str = '{{Taxonomy_JSON}}'.replace(/&quot;/g, '"');
+        var json = JSON.parse(json_str);
+    </script>
+    <script type="text/javascript" src="{% static 'FintechExplorerApp/Taxonomy.js' %}"></script>
+</head>
+
+<body onload="init();">
+    <div id="container">
+
+        <div id="right-container">
+            <div id="inner-details"></div>
+        </div>
+
+        <div id="center-container">
+            <div id="infovis"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

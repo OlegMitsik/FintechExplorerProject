@@ -1,0 +1,78 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Lucida Grande", Verdana;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+input, select {
+    font-size:0.9em;
+}
+
+table {
+    margin-top:-10px;
+    margin-left:7px;
+}
+
+h4 {
+    font-size:1.1em;
+    text-decoration:none;
+    font-weight:normal;
+    color:#23A4FF;
+}
+
+a {
+    color:#23A4FF;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+    position:relative;
+}
+
+
+#right-container {
+    width:100%;
+    color:#000000;
+    text-align: center;
+    position: relative;
+    overflow: auto;
+    left:0px;
+    font-size: 1.3em;
+}
+
+
+#center-container {
+    height:100%;
+    width:100%;
+    left:0px;
+    
+}
+
+.text {
+    margin: 7px;
+}
+
+#inner-details {
+    font-size:0.8em;
+    list-style:none;
+    margin:7px;
+}
+
+
+#infovis {
+    position:relative;
+    width:100%;
+    height:700px;
+    margin:auto;
+    overflow:hidden;
+}
+
+#infovis-canvaswidget {
+  margin:25px 0 0 25px;
+}

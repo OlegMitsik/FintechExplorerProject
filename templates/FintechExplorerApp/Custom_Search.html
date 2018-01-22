@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FintechExplorerApp/Custom_Search.css' %}">
+    <script type="text/javascript" src="{% static 'FintechExplorerApp/Custom_Search.js' %}"></script>
+</head>
+
+<body>
+<div class="base_area">
+<div class="interim_column"><br></div>
+
+<div class="base_column">
+    <form method="get" action="{% url 'file_grid' %}">
+        <h3> Custom Search </h3>
+        <div class="search-wrapper">
+            <input required type="text" name="custom_search" maxlength="63" class="search-box" placeholder="Enter search request" />
+                <button class="close-icon" type="reset" onclick="check_reset()"></button>
+        </div>
+        <div class="recent_searches">
+	    	<span>Recent requests: </span>
+	        <span class="recent_searches_span" style="color:#000000">{{ RecentRequests.0.2 }}</span><span style="color:#000000">,</span>
+	        <span class="recent_searches_span" style="color:#222222">{{ RecentRequests.1.2 }}</span><span style="color:#222222">,</span>
+	        <span class="recent_searches_span" style="color:#444444">{{ RecentRequests.2.2 }}</span><span style="color:#444444">,</span>
+	        <span class="recent_searches_span" style="color:#666666">{{ RecentRequests.3.2 }}</span><span style="color:#666666">,</span>
+	        <span class="recent_searches_span" style="color:#888888">{{ RecentRequests.4.2 }}</span><span style="color:#888888">...</span>
+	    </div>
+		<br><br>
+        <h3> Search by </h3>
+        <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="check_event()" checked>
+            <label class="onoffswitch-label" for="myonoffswitch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+        </div>
+        <br><br><br>
+        <input type="hidden" name="CustomQueryType" id="QueryTypeID" value="name">
+        <input type="submit" class='myButton' value="Go">
+    </form>
+</div>
+
+<div class="interim_column"><br></div>
+</div>
+
+</body>
+</html>

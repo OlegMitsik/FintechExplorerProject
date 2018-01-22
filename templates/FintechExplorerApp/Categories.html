@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'FintechExplorerApp/Categories.css' %}">
+    <script type="text/javascript" src="{% static 'FintechExplorerApp/JQuery.min.js' %}"></script>
+</head>
+
+<body>
+    <form method="get" action="{% url 'category_selected' %}">
+        <div class='selector'>
+            <ul>
+                {% for Item in Categories %}
+                <li>
+                  <input id="{{ forloop.counter }}" type="submit" name="selected" value="{{ Item.1 }}">
+                  <label for="{{ forloop.counter }}">{{ Item.0 }}</label>
+                </li>
+                {% endfor %}
+            </ul>
+            <button type=button>Columbia FinTech</button>
+        </div>
+    </form>
+    <script type="text/javascript" src="{% static 'FintechExplorerApp/Categories.js' %}"></script>
+</body>
+
+</html>
